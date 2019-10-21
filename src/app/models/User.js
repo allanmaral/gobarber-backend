@@ -9,6 +9,7 @@ class User extends Model {
       password: Sequelize.VIRTUAL,
       password_hash: Sequelize.STRING,
       provider: Sequelize.BOOLEAN,
+      avatar_id: Sequelize.INTEGER,
     },
     {
       sequelize,
@@ -21,6 +22,10 @@ class User extends Model {
     });
 
     return this;
+  }
+
+  static associate(models) {
+    this.belongsTo(models.File, { foreignKey: 'avatar_id' });
   }
 
   checkPassword(password) {
