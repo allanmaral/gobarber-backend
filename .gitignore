@@ -102,3 +102,8 @@ public
 
 # Yarn files
 yarn.*
+
+# Temporary and upload files
+temp/
+
+.DS_Store
