@@ -14,8 +14,6 @@ class AvailableController {
     }
 
     const searchDate = Number(date);
-    console.log(req.params.providerId);
-    console.log(startOfDay(searchDate), endOfDay(searchDate));
 
     const appointments = await Appointment.findAll({
       where: {
