@@ -106,4 +106,7 @@ yarn.*
 # Temporary and upload files
 temp/
 
+# Environment Variables
+.env
+
 .DS_Store
